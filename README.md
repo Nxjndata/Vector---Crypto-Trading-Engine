@@ -128,4 +128,4 @@ scripts/         # DB backup/restore
 
 Watch the bot running on Binance USDT-M Testnet:
 
-https://github.com/YOUR_USERNAME/YOUR_REPO/blob/main/docs/demo.mp4
+(https://github.com/Nxjndata/Vector---Crypto-Trading-Engine/blob/main/Demo.mov)
