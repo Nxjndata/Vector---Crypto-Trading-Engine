@@ -1,0 +1,23 @@
+services:
+  timescaledb:
+    image: timescale/timescaledb:latest-pg16
+    container_name: algo_trading_timescaledb
+    restart: unless-stopped
+    ports:
+      - "${PLATFORM__DATABASE__PORT:-5433}:5432"
+    environment:
+      POSTGRES_USER: ${PLATFORM__DATABASE__USER:-postgres}
+      POSTGRES_PASSWORD: ${PLATFORM__DATABASE__PASSWORD:-postgres}
+      POSTGRES_DB: ${PLATFORM__DATABASE__NAME:-algo_trading_db}
+    volumes:
+      - timescaledb_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${PLATFORM__DATABASE__USER:-postgres} -d ${PLATFORM__DATABASE__NAME:-algo_trading_db}"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
+
+volumes:
+  timescaledb_data:
+    name: algo_trading_timescaledb_data

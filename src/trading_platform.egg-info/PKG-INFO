@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: trading-platform
+Version: 0.1.0
+Summary: Modular Crypto Algorithmic Trading Platform for Binance USDT-M Perpetual Futures
+Author: Trading Infrastructure Engineer
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic<3.0.0,>=2.7.0
+Requires-Dist: pydantic-settings<3.0.0,>=2.2.1
+Requires-Dist: pyyaml<7.0.0,>=6.0.1
+Requires-Dist: sqlalchemy[asyncio]<3.0.0,>=2.0.29
+Requires-Dist: asyncpg<1.0.0,>=0.29.0
+Requires-Dist: aiosqlite<1.0.0,>=0.20.0
+Requires-Dist: alembic<2.0.0,>=1.13.1
+Requires-Dist: httpx<1.0.0,>=0.27.0
+Requires-Dist: ntplib<1.0.0,>=0.4.0
+Requires-Dist: python-dateutil<3.0.0,>=2.9.0
+Requires-Dist: colorama<1.0.0,>=0.4.6
+Provides-Extra: dev
+Requires-Dist: pytest<9.0.0,>=8.1.1; extra == "dev"
+Requires-Dist: pytest-asyncio<1.0.0,>=0.23.6; extra == "dev"
+Requires-Dist: pytest-cov<6.0.0,>=5.0.0; extra == "dev"
+Requires-Dist: pytest-mock<4.0.0,>=3.14.0; extra == "dev"
+Requires-Dist: ruff<1.0.0,>=0.3.5; extra == "dev"
+
+# Binance USDT-M Perpetual Futures Algorithmic Trading Platform
+
+A modular, production-style cryptocurrency algorithmic trading platform for Binance USDT-M Perpetual Futures built with Python, FastAPI, asyncio, SQLAlchemy, and PostgreSQL/TimescaleDB.
